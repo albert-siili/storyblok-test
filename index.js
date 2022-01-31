@@ -7,7 +7,7 @@ const params = {
     "resolve_links": "url",
     "cv": "1643281682",
     "version": "published",
-    "token": "[token]"
+    "token": process.env.TOKEN
 };
 Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
 
@@ -31,7 +31,7 @@ for (let i = 0; i < 100; i++) {
             "resolve_links": "url",
             "cv": "1643281682",
             "version": "published",
-            "token": "[token]"
+            "token": process.env.TOKEN
         }
     })
         .then(function (response) {
